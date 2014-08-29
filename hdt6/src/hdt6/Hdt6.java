@@ -4,17 +4,41 @@
 
 package hdt6;
 
-/**
- *
- * @author Isa
- */
+import java.util.*;
 public class Hdt6 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+   public static void main(String args[]) {
+      // create a hash set
+      
+       HashSet hs = new HashSet();
+      // add elements to the hash set
+      hs.add("B");
+      hs.add("A");
+      hs.add("D");
+      hs.add("E");
+      hs.add("C");
+      hs.add("F");
+      System.out.println("HashSet" + hs);
+      
+      TreeSet ts = new TreeSet();
+      // Add elements to the tree set
+   
+      ts.add("C");
+      ts.add("A");
+      ts.add("B");
+      ts.add("E");
+      ts.add("F");
+      ts.add("D");
+      System.out.println("TreeSet" + ts);
+      
+      LinkedHashSet hsl = new LinkedHashSet();
+      // add elements to the hash set
+      hsl.add("B");
+      hsl.add("A");
+      hsl.add("D");
+      hsl.add("E");
+      hsl.add("C");
+      hsl.add("F");
+      System.out.println("LinkedHashSet" + hsl);
+   }
 }
