@@ -14,13 +14,14 @@ import java.util.TreeSet;
 class Factory<E> {
 
 public Set<E> getImplementacion(String set){ 
-    if (set.equals("hashset")){ 
+    
+    if (set.equals("hashset")){ //Se regresa implementacion hashset
         return new HashSet<E>();
     }
-    if (set.equals("treeset")){ 
+    if (set.equals("treeset")){ //Se regresa implementacion treeset
         return new TreeSet<E>(); 
     }
-    if (set.equals("linkedhashset")){ 
+    if (set.equals("linkedhashset")){ //Se regresa implementacion linkedhashset
         return new LinkedHashSet<E>(); 
     }
         return null;

@@ -7,9 +7,6 @@
 
 package hdt6;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.Scanner;
 import java.util.TreeSet;
@@ -17,17 +14,18 @@ import java.util.TreeSet;
 public class Hdt6 {
     
     public static void main(String[] args) {
-     
+    //Ingreso de tipo de implementacion
     System.out.println ("Que tipo de implementacion SET que desea utilizar: TS, HS, LHS"); 
     String set = ""; 
     Scanner entrada = new Scanner (System.in); 
     set = entrada.nextLine ();
     set = set.toUpperCase();
+    //PRogramacion defensiva para el ingreso de implementacion
     while(!set.equals("TS") && !set.equals("HS") && !set.equals("LHS") && !set.equals("ts") && !set.equals("hs") && !set.equals("lhs")){
     System.out.println ("Que tipo de implementacion SET que desea utilizar:"); 
     set = ""; 
     entrada = new Scanner (System.in); 
-    set = entrada.nextLine ();
+    set = entrada.nextLine (); //Referencia al dato ingresado
     }
     
     if (set.equals("TS")) { //Orden alfabetico
@@ -64,9 +62,9 @@ public class Hdt6 {
     WebCelularNoJava=factory.getImplementacion(set);
     mayorDesarrolladores=factory.getImplementacion(set);
     celular=factory.getImplementacion(set);
-    celular=factory.getImplementacion(set);
-    celular=factory.getImplementacion(set);
-    
+    java=factory.getImplementacion(set);
+    web=factory.getImplementacion(set);
+   
     
     // Ciclo para ingresar los desarrolladores
     int cont=0;
@@ -123,9 +121,9 @@ public class Hdt6 {
     // Inciso 5
     boolean subconjunto= java.containsAll(web);
     if (subconjunto){
-    System.out.println("Java si es subconjunto de los desarrolladores WEB");
+    System.out.println("Java si es subconjunto de los desarrolladores Web");
     }else{
-    System.out.println("Java no es subconjunto de los desarrolladores WEB");
+    System.out.println("Java no es subconjunto de los desarrolladores Web");
     }
     // Inciso 6
     int tamJava= java.size();
@@ -135,12 +133,12 @@ public class Hdt6 {
     if (tamJava>tamCelular && tamJava>tamWeb){
     System.out.println("Java tiene la cantidad mas grande de desarrolladores"+ java);
     mayorDesarrolladores.addAll(java);
-    mayor="Java";
-    }if (tamCelular>tamJava && tamCelular> tamWeb){
+    mayor="Java";}
+    if (tamCelular>tamJava && tamCelular> tamWeb){
     System.out.println("Celular tiene la cantidad mas grande de desarrolladores"+ celular);
     mayorDesarrolladores.addAll(celular);
-    mayor="Celular";
-    }else{
+    mayor="Celular";}
+    else{
     System.out.println("Web tiene la cantidad mas grande de desarrolladores"+ web);
     mayorDesarrolladores.addAll(web);
     mayor="Web";
