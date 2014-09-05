@@ -12,6 +12,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 class Factory<E> {
+    
+
 
 public Set<E> getImplementacion(String set){ 
     
@@ -26,4 +28,6 @@ public Set<E> getImplementacion(String set){
     }
         return null;
     }
+
+   
 }

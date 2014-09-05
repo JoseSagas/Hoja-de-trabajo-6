@@ -7,9 +7,11 @@
 
 package hdt6;
 
-import java.util.Set;
+import static java.lang.reflect.Array.set;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeSet;
+import static javafx.scene.paint.Color.web;
 
 public class Hdt6 {
     
@@ -118,13 +120,8 @@ public class Hdt6 {
     WebCelularNoJava.addAll(web);
     WebCelularNoJava.removeAll(java);
     System.out.println("Desarrolladores de Celular o Web pero no de Java: "+WebCelularNoJava);
-    // Inciso 5
-    boolean subconjunto= java.containsAll(web);
-    if (subconjunto){
-    System.out.println("Java si es subconjunto de los desarrolladores Web");
-    }else{
-    System.out.println("Java no es subconjunto de los desarrolladores Web");
-    }
+  
+    
     // Inciso 6
     int tamJava= java.size();
     int tamCelular= celular.size();
@@ -146,5 +143,19 @@ public class Hdt6 {
     // Inciso 7
     Set ascendente= new TreeSet(mayorDesarrolladores);
     System.out.println("Los desarrolladores "+mayor+" tienen mayor cantidad"+ ascendente);
+    
+    //Inciso 5
+
+    boolean subconjunto = java.containsAll(web);
+    if (subconjunto){
+    System.out.println("Java si es subconjunto de los desarrolladores Web");
+    }else{
+    System.out.println("Java no es subconjunto de los desarrolladores Web");
     }
-}
+    
+    
+    }   
+    
+   
+    
+} 
